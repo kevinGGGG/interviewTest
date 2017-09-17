@@ -15,7 +15,7 @@ class UserController extends Controller
     	if(Auth::attempt(['account' => $request->input('account'),'password' => $request->input('password')]))
     		return redirect('info');//attemp驗證之密碼為bcrypt後之結果
     	else{
-    		return redirect('/login');
+    		return redirect('/login');//hers is the test branch commit
         }
 
     }

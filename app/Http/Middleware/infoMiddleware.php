@@ -18,7 +18,7 @@ class infoMiddleware
     {
         $user = Auth::user();
         if(Auth::check())
-            return $next($request);
+            return $next($request);//登入成功後 繼續執行需求 否則返回登入頁面
         return redirect('login');
     }
 }
